@@ -677,6 +677,12 @@ MonoBehaviour:
   errorMaterial: {fileID: 2100000, guid: 0e9a42b5eb0b6544f93c0d3ebf674585, type: 2}
   playerHP: 100
   enemyHP: 200
+  player: {fileID: 4534915878076810646, guid: 5ee1e6d90493a8f4e950006db54b85de, type: 3}
+  enemy: {fileID: 1135047475486594729, guid: fca137954947bdf4ba95fd044a1e2909, type: 3}
+  _spawnPerimeterX: 4
+  _spawnPerimeterZ: 4
+  _maxSpawnPerimeter: 3
+  _spawnHeight: 0.5
 --- !u!114 &2031196302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,6 +695,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4354e062d6848d4894ed40afaf03168, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 4534915878076810646, guid: 5ee1e6d90493a8f4e950006db54b85de, type: 3}
-  enemy: {fileID: 1135047475486594729, guid: fca137954947bdf4ba95fd044a1e2909, type: 3}
-  _maxSpawnPerimeter: 5

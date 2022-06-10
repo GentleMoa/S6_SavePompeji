@@ -7,10 +7,10 @@ public class Cube : MonoBehaviour
     //Public Variables
     public GameObjectType type;
     public string title;
+    public Renderer _renderer;
 
     //Private Variables
     private Settings _settings;
-    private Renderer _renderer;
     private int _lifePoints;
 
     // Start is called before the first frame update
@@ -44,6 +44,31 @@ public class Cube : MonoBehaviour
         _lifePoints += points;
     }
 
+    public Material SwitchMaterial(GameObjectType _type)
+    {
+        if (_type == GameObjectType.Player)
+        {
+            return _settings.playerMaterial_alternative;
+        }
+        else if (_type == GameObjectType.Enemy)
+        {
+            return _settings.enemyMaterial_alternative;
+        }
+        return _settings.errorMaterial;
+    }
+
+    public void CubeAnimation(GameObjectType _type)
+    {
+        if (_type == GameObjectType.Player)
+        {
+            this.gameObject.GetComponent<Animator>().SetTrigger("animTrigger");
+        }
+        else if (_type == GameObjectType.Enemy)
+        {
+            this.gameObject.GetComponent<Animator>().SetTrigger("animTrigger");
+        }
+    }
+
     //Private Methods
     private int LifePointsFor(GameObjectType _type)
     {
@@ -63,11 +88,11 @@ public class Cube : MonoBehaviour
     {
         if (_type == GameObjectType.Player)
         {
-            return _settings.playerMaterial;
+            return _settings.playerMaterial_default;
         }
         else if (_type == GameObjectType.Enemy)
         {
-            return _settings.enemyMaterial;
+            return _settings.enemyMaterial_default;
         }
         Debug.LogWarning("GameObjectType.LifePoints: _type is unknown");
         return _settings.errorMaterial;

@@ -69,7 +69,7 @@ public class Cube : MonoBehaviour
         }
     }
 
-    //Private Methods
+        //Private Methods
     private int LifePointsFor(GameObjectType _type)
     {
         switch (_type)

@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene_PlayerSelection.unity
     guid: e0b0bf8726bbd244dbd881abe0afa32d
   - enabled: 1
-    path: Assets/Scenes/Scene_Blockout.unity
+    path: Assets/Scenes/Not used/Scene_Blockout.unity
     guid: 634fe0fde58d450469e1610547dfa0c9
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 1cf56b85043beab4a8ed894e137cacfb,
